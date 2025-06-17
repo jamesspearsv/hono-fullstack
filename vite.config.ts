@@ -5,6 +5,7 @@ import devServer from '@hono/vite-dev-server';
 export default defineConfig(({ mode }) => {
   {
     if (mode === 'client') {
+      /* Build client app */
       return {
         build: {
           rollupOptions: {
@@ -18,6 +19,7 @@ export default defineConfig(({ mode }) => {
         },
       };
     } else {
+      /* Build server app */
       const entry = './src/index.tsx';
       return {
         plugins: [
