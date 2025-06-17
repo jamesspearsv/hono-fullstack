@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
         },
       };
     } else {
-      /* Build server app */
+      /* Build server app & use dev server */
       const entry = './src/index.tsx';
       return {
         plugins: [

@@ -1,16 +1,10 @@
-import { useState } from 'hono/jsx';
+import Counter from './Counter.js';
+import Router from './router.js';
 
 export function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <section>
-      <div>
-        <button type="button" onClick={() => setCount((c) => c + 1)}>
-          Increase count
-        </button>
-        <span>Count: {count}</span>
-      </div>
+      <Counter />
     </section>
   );
 }
